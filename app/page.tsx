@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { 
   Wrench, 
@@ -110,7 +112,6 @@ const CONTENT = {
 };
 
 export default function MagilineExpertWebsite() {
-  // A nyelvi verzió itt később dinamikussá tehető (pl. useState-tel vagy Next-Intl-lel)
   const t = CONTENT.hu; 
 
   return (
@@ -135,7 +136,6 @@ export default function MagilineExpertWebsite() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            {/* NYELVVÁLASZTÓ INDIKÁTOR (A jövőbeli többnyelvűség előkészítése) */}
             <div className="flex items-center gap-1 text-xs border border-[#8DA9C4]/40 px-2 py-1 rounded bg-white font-medium text-[#134074]">
               <Globe2 size={14} />
               <span className="font-bold underline text-[#0B2545]">HU</span>
@@ -176,7 +176,6 @@ export default function MagilineExpertWebsite() {
               </div>
             </div>
             
-            {/* Vizuális placeholder/Képkonténer */}
             <div className="lg:col-span-5 relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#134074]/20 to-transparent rounded-3xl transform rotate-3 scale-105 -z-10"></div>
               <div className="w-full h-80 sm:h-96 bg-gradient-to-br from-[#0B2545] to-[#134074] rounded-2xl shadow-2xl flex flex-col justify-between p-8 text-white relative overflow-hidden">
@@ -190,7 +189,7 @@ export default function MagilineExpertWebsite() {
                 </div>
                 <div className="border-t border-white/20 pt-6 space-y-2">
                   <p className="text-xs text-white/80 italic">"A technológia francia, a szakértelem hazai."</p>
-                  <div className="flex gap-1 text-yellow-400">{'★'.repeat(5)}</div>
+                  <div className="flex gap-1 text-yellow-400">★★★★★</div>
                 </div>
               </div>
             </div>
@@ -202,3 +201,6 @@ export default function MagilineExpertWebsite() {
       <section id="section-0" className="bg-white border-y border-[#8DA9C4]/20 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {t.stats.map((stat, idx) => (
+              <div key={idx} className="space-y-1">
+                <p className="text-4xl lg:text-5xl font-extrabold text-[#0B2545] font-mono">{stat.value}</p>

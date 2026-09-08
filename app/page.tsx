@@ -6,7 +6,6 @@ import {
   Droplet, 
   Layers, 
   Cpu, 
-  Calendar, 
   Sun, 
   Snowflake, 
   ShieldCheck, 
@@ -20,7 +19,6 @@ import {
   Globe2
 } from 'lucide-react';
 
-// NYELVI LOKALIZÁCIÓS STRUKTÚRA (Bármikor bővíthető EN és FR nyelvekkel)
 const CONTENT = {
   hu: {
     nav: {
@@ -47,21 +45,25 @@ const CONTENT = {
       subtitle: "A Magiline medencék speciális odafigyelést igényelnek. Ismerjük minden csavarjukat az őszi fagyoktól a nyári kánikuláig.",
       items: [
         {
+          id: 1,
           icon: Sun,
           title: "Tavaszi Nyitás & Beüzemelés",
           desc: "Rendszer teljes újraindítása, professzionális vegyszeres vízkezelés indítása, szűrődiagnosztika és az iMAGI-X automatizáció finomhangolása a szezonra."
         },
         {
+          id: 2,
           icon: Droplet,
           title: "Nyári Karbantartás & Finomhangolás",
           desc: "Folyamatos vízminőség optimalizálás, szivárgásvizsgálat, liner ellenőrzés, távvezérlési szenzorok (pH/ORP) kalibrálása a gondtalan használatért."
         },
         {
+          id: 3,
           icon: Snowflake,
           title: "Professzionális Téli Zárás",
           desc: "Fagyvédelem felsőfokon. A csőrendszer teljes víztelenítése, a speciális Magiline téli takarórendszerek telepítése az aktív szűrőblokk védelmében."
         },
         {
+          id: 4,
           icon: Wrench,
           title: "Hardveres Javítás & Modernizáció",
           desc: "FX és NFX szabadalmaztatott szűrőszivattyúk felújítása, alkatrészcsere, valamint a régebbi modellek átalakítása modern, okos iMAGI-X ökoszisztémává."
@@ -73,16 +75,19 @@ const CONTENT = {
       subtitle: "Franciaország piacvezető szabadalmait javítjuk és konfiguráljuk napi szinten.",
       items: [
         {
+          id: 1,
           icon: Layers,
           title: "NFX Szabadalmaztatott Szűrőblokkok",
           desc: "A patronos szűrőrendszer mélyreható ismerete. 3-szor gyorsabb szűrési ciklusok beállítása minimális vízveszteség mellett."
         },
         {
+          id: 2,
           icon: Cpu,
           title: "iMAGI-X Okos Automatizáció",
           desc: "Komplett digitális vezérlés kalibrálása. Hőmérséklet, vízszint, világítás és vegyszeradagolás távoli elérésének professzionális kiépítése."
         },
         {
+          id: 3,
           icon: ShieldCheck,
           title: "Moduláris Zsaluzatos Betonszerkezet",
           desc: "A Magiline egyedi panelrendszerének és vasalt betonszerkezetének statikai ismerete, bélésfóliák (liner) szakszerű javítása."
@@ -188,7 +193,7 @@ export default function MagilineExpertWebsite() {
                   <p className="text-xl font-bold font-mono">EST. 2017 / HUNGARY</p>
                 </div>
                 <div className="border-t border-white/20 pt-6 space-y-2">
-                  <p className="text-xs text-white/80 italic">"A technológia francia, a szakértelem hazai."</p>
+                  <p className="text-xs text-white/80 italic">&quot;A technológia francia, a szakértelem hazai.&quot;</p>
                   <div className="flex gap-1 text-yellow-400">★★★★★</div>
                 </div>
               </div>

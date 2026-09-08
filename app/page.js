@@ -1,195 +1,112 @@
 "use client";
 
 import React from 'react';
-import { 
-  Wrench, 
-  Droplet, 
-  Layers, 
-  Cpu, 
-  Sun, 
-  Snowflake, 
-  ShieldCheck, 
-  Clock, 
-  Award, 
-  CheckCircle2, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ArrowRight,
-  Globe2
-} from 'lucide-react';
-
-const CONTENT = {
-  hu: {
-    nav: {
-      brand: "Magiline Szerviz",
-      badge: "Független Specialisták",
-      links: ["10 Év Tapasztalat", "Szezonalitás", "Technológia", "B2B Vízió", "Kapcsolat"],
-      cta: "Szakértői Ajánlatkérés"
-    },
-    hero: {
-      tag: "KÖZEL 10 ÉVES SPECIALIZÁLT MÚLT",
-      title: "Prémium Magiline Medence Karbantartás és Szerviz",
-      subtitle: "Nem csupán üzemeltetjük, hanem tökéletesen fenntartjuk. A francia prémium medencetechnológia hazai szakértői vagyunk a szerkezeti javítástól az iMAGI-X okosvezérlésig.",
-      ctaPrimary: "Tekintse meg referenciáinkat",
-      ctaSecondary: "Kapcsolatfelvétel"
-    },
-    stats: [
-      { value: "9+", label: "Év Magiline tapasztalat" },
-      { value: "150+", label: "Kezelt medence itthon" },
-      { value: "500+", label: "Sikeres nyitás és téli zárás" },
-      { value: "100%", label: "Márkaspecifikus szaktudás" }
-    ],
-    seasons: {
-      title: "4 Évszakos Teljes Életciklus Gondozás",
-      subtitle: "A Magiline medencék speciális odafigyelést igényelnek. Ismerjük minden csavarjukat az őszi fagyoktól a nyári kánikuláig.",
-      items: [
-        {
-          id: 1,
-          icon: Sun,
-          title: "Tavaszi Nyitás & Beüzemelés",
-          desc: "Rendszer teljes újraindítása, professzionális vegyszeres vízkezelés indítása, szűrődiagnosztika és az iMAGI-X automatizáció finomhangolása a szezonra."
-        },
-        {
-          id: 2,
-          icon: Droplet,
-          title: "Nyári Karbantartás & Finomhangolás",
-          desc: "Folyamatos vízminőség optimalizálás, szivárgásvizsgálat, liner ellenőrzés, távvezérlési szenzorok (pH/ORP) kalibrálása a gondtalan használatért."
-        },
-        {
-          id: 3,
-          icon: Snowflake,
-          title: "Professzionális Téli Zárás",
-          desc: "Fagyvédelem felsőfokon. A csőrendszer teljes víztelenítése, a speciális Magiline téli takarórendszerek telepítése az aktív szűrőblokk védelmében."
-        },
-        {
-          id: 4,
-          icon: Wrench,
-          title: "Hardveres Javítás & Modernizáció",
-          desc: "FX és NFX szabadalmaztatott szűrőszivattyúk felújítása, alkatrészcsere, valamint a régebbi modellek átalakítása modern, okos iMAGI-X ökoszisztémává."
-        }
-      ]
-    },
-    tech: {
-      title: "Márkaspecifikus Technológiai Kompetencia",
-      subtitle: "Franciaország piacvezető szabadalmait javítjuk és konfiguráljuk napi szinten.",
-      items: [
-        {
-          id: 1,
-          icon: Layers,
-          title: "NFX Szabadalmaztatott Szűrőblokkok",
-          desc: "A patronos szűrőrendszer mélyreható ismerete. 3-szor gyorsabb szűrési ciklusok beállítása minimális vízveszteség mellett."
-        },
-        {
-          id: 2,
-          icon: Cpu,
-          title: "iMAGI-X Okos Automatizáció",
-          desc: "Komplett digitális vezérlés kalibrálása. Hőmérséklet, vízszint, világítás és vegyszeradagolás távoli elérésének professzionális kiépítése."
-        },
-        {
-          id: 3,
-          icon: ShieldCheck,
-          title: "Moduláris Zsaluzatos Betonszerkezet",
-          desc: "A Magiline egyedi panelrendszerének és vasalt betonszerkezetének statikai ismerete, bélésfóliák (liner) szakszerű javítása."
-        }
-      ]
-    },
-    b2b: {
-      title: "B2B Jövőkép: Úton a Hivatalos Disztribúció Felé",
-      desc: "Célunk, hogy a régió legelismertebb Magiline szervizpartnereként szintet lépjünk. Hivatalos, gyári márkaképviseletként és disztribútorként kívánjuk biztosítani a francia anyavállalat számára a legmagasabb szintű hazai értékesítést és támogatást.",
-      badge: "Hivatalos Disztribútori Jelölt"
-    },
-    contact: {
-      title: "Kérjen Szakértői Segítséget Medencéjéhez",
-      subtitle: "Vegye fel velünk a kapcsolatot, legyen szó sürgős javításról vagy szezonális munkákról.",
-      fields: {
-        name: "Az Ön neve",
-        email: "E-mail címe",
-        phone: "Telefonszáma",
-        type: "Medence típusa / kora",
-        service: "Kért szolgáltatás",
-        services: ["Tavaszi nyitás", "Téli zárás", "Karbantartás", "iMAGI-X / Szivattyú javítás", "Egyéb modernizáció"],
-        msg: "Üzenet leírása",
-        submit: "Küldés a Magiline Specialistának"
-      }
-    }
-  }
-};
 
 export default function MagilineExpertWebsite() {
-  const t = CONTENT.hu; 
-
   return (
-    <div style={{ backgroundColor: '#EEF4F8', color: '#0B2545', fontFamily: 'sans-serif', minHeight: 'screen' }}>
+    <div style={{ backgroundColor: '#EEF4F8', color: '#0B2545', fontFamily: 'sans-serif', minHeight: '100vh', margin: 0, padding: 0 }}>
       
-      {/* HEADER */}
-      <header style={{ backgroundColor: 'white', padding: '20px', borderBottom: '1px solid #8DA9C4' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'between', alignItems: 'center' }}>
+      {/* 1. HEADER & NAVIGATION */}
+      <header style={{ backgroundColor: 'white', padding: '20px', borderBottom: '1px solid #8DA9C4', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <strong style={{ fontSize: '20px' }}>{t.nav.brand}</strong>
-            <div style={{ fontSize: '12px', color: '#134074' }}>{t.nav.badge}</div>
+            <strong style={{ fontSize: '22px', trackingTight: 'tight' }}>💧 Magiline Szerviz</strong>
+            <div style={{ fontSize: '12px', color: '#134074', fontWeight: 'bold' }}>Független Specialisták</div>
           </div>
-          <div style={{ display: 'flex', gap: '10px' }}>
-            <span style={{ fontWeight: 'bold' }}>HU</span>
+          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+            <span style={{ fontWeight: 'bold', fontSize: '14px', border: '1px solid #8DA9C4', padding: '3px 8px', borderRadius: '5px' }}>HU</span>
+            <a href="#contact" style={{ backgroundColor: '#0B2545', color: 'white', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold' }}>Ajánlatkérés</a>
           </div>
         </div>
       </header>
 
-      {/* HERO */}
-      <section style={{ padding: '60px 20px', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-        <span style={{ backgroundColor: '#134074', color: 'white', padding: '5px 10px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>{t.hero.tag}</span>
-        <h1 style={{ fontSize: '40px', marginTop: '20px', marginBottom: '20px' }}>{t.hero.title}</h1>
-        <p style={{ color: '#134074', fontSize: '18px', lineHeight: '1.6' }}>{t.hero.subtitle}</p>
-        <div style={{ marginTop: '30px' }}>
-          <a href="#contact" style={{ backgroundColor: '#0B2545', color: 'white', padding: '15px 30px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold' }}>{t.hero.ctaSecondary}</a>
+      {/* 2. HERO SECTION */}
+      <section style={{ padding: '80px 20px', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+        <span style={{ backgroundColor: '#134074', color: 'white', padding: '6px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold', trackingWider: 'wider' }}>
+          🏆 KÖZEL 10 ÉVES SPECIALIZÁLT MÚLT
+        </span>
+        <h1 style={{ fontSize: '42px', marginTop: '25px', marginBottom: '25px', fontWeight: '800', lineHeight: '1.2' }}>
+          Prémium Magiline Medence Karbantartás és Szerviz
+        </h1>
+        <p style={{ color: '#134074', fontSize: '19px', lineHeight: '1.6', margin: '0 auto 30px auto' }}>
+          Időtálló biztonság és tiszta élvezet. A francia prémium medencetechnológia hazai szakértői vagyunk a szerkezeti javításoktól az iMAGI-X okosvezérlés konfigurálásáig.
+        </p>
+        <div>
+          <a href="#contact" style={{ backgroundColor: '#134074', color: 'white', padding: '15px 32px', borderRadius: '12px', textDecoration: 'none', fontWeight: 'bold', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
+            Kapcsolatfelvétel és Szerviz →
+          </a>
         </div>
       </section>
 
-      {/* STATS */}
-      <section style={{ backgroundColor: 'white', padding: '40px 20px', borderY: '1px solid #8DA9C4' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '20px' }}>
-          {t.stats.map((stat, idx) => (
-            <div key={idx} style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '36px', fontWeight: 'bold' }}>{stat.value}</div>
-              <div style={{ fontSize: '14px', color: '#134074' }}>{stat.label}</div>
-            </div>
-          ))}
+      {/* 3. STATS BAR */}
+      <section style={{ backgroundColor: 'white', padding: '40px 20px', borderTop: '1px solid #8DA9C4', borderBottom: '1px solid #8DA9C4' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '30px' }}>
+          <div style={{ textAlign: 'center' }}><div style={{ fontSize: '38px', fontWeight: 'bold' }}>9+</div><div style={{ fontSize: '14px', color: '#134074' }}>Év Magiline tapasztalat</div></div>
+          <div style={{ textAlign: 'center' }}><div style={{ fontSize: '38px', fontWeight: 'bold' }}>150+</div><div style={{ fontSize: '14px', color: '#134074' }}>Kezelt medence itthon</div></div>
+          <div style={{ textAlign: 'center' }}><div style={{ fontSize: '38px', fontWeight: 'bold' }}>500+</div><div style={{ fontSize: '14px', color: '#134074' }}>Sikeres nyitás és zárás</div></div>
+          <div style={{ textAlign: 'center' }}><div style={{ fontSize: '38px', fontWeight: 'bold' }}>100%</div><div style={{ fontSize: '14px', color: '#134074' }}>Márkaspecifikus tudás</div></div>
         </div>
       </section>
 
-      {/* SEASONS */}
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h2 style={{ textAlign: 'center', fontSize: '32px' }}>{t.seasons.title}</h2>
-        <p style={{ textAlign: 'center', color: '#134074', marginBottom: '40px' }}>{t.seasons.subtitle}</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
-          {t.seasons.items.map((item) => (
-            <div key={item.id} style={{ backgroundColor: 'white', padding: '25px', borderRadius: '15px', width: '250px', border: '1px solid #8DA9C4' }}>
-              <h3>{item.title}</h3>
-              <p style={{ fontSize: '14px', color: '#134074' }}>{item.desc}</p>
-            </div>
-          ))}
+      {/* 4. FOUR SEASONS CARE */}
+      <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '34px', fontWeight: 'bold', marginBottom: '10px' }}>4 Évszakos Teljes Életciklus Gondozás</h2>
+        <p style={{ textAlign: 'center', color: '#134074', marginBottom: '50px', fontSize: '16px' }}>A Magiline medencék speciális odafigyelést igényelnek. Ismerjük minden alkatrészüket a téli fagyoktól a nyári kánikuláig.</p>
+        
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '25px', justifyContent: 'center' }}>
+          <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '20px', width: '260px', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', border: '1px solid rgba(141,169,196,0.2)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '15px' }}>☀️</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 10px 0' }}>Tavaszi Nyitás</h3>
+            <p style={{ fontSize: '14px', color: '#134074', lineHeight: '1.5', margin: 0 }}>Rendszer teljes újraindítása, professzionális vegyszeres vízkezelés indítása, szűrődiagnosztika és az iMAGI-X automatizáció syncing.</p>
+          </div>
+          <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '20px', width: '260px', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', border: '1px solid rgba(141,169,196,0.2)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '15px' }}>💧</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 10px 0' }}>Nyári Karbantartás</h3>
+            <p style={{ fontSize: '14px', color: '#134074', lineHeight: '1.5', margin: 0 }}>Folyamatos vízminőség optimalizálás, szivárgásvizsgálat, bélésfólia (liner) ellenőrzés, távvezérlési szenzorok (pH/ORP) kalibrálása.</p>
+          </div>
+          <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '20px', width: '260px', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', border: '1px solid rgba(141,169,196,0.2)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '15px' }}>❄️</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 10px 0' }}>Professzionális Téli Zárás</h3>
+            <p style={{ fontSize: '14px', color: '#134074', lineHeight: '1.5', margin: 0 }}>Fagyvédelem felsőfokon. A csőrendszer teljes víztelenítése, a speciális Magiline téli takarórendszerek precíz telepítése.</p>
+          </div>
+          <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '20px', width: '260px', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', border: '1px solid rgba(141,169,196,0.2)' }}>
+            <div style={{ fontSize: '28px', marginBottom: '15px' }}>🔧</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 10px 0' }}>Hardveres Javítás</h3>
+            <p style={{ fontSize: '14px', color: '#134074', lineHeight: '1.5', margin: 0 }}>FX és NFX szabadalmaztatott szűrőszivattyúk felújítása, alkatrészcsere, valamint a régebbi modellek okosítása.</p>
+          </div>
         </div>
       </section>
 
-      {/* B2B VISION */}
-      <section style={{ backgroundColor: '#0B2545', color: 'white', padding: '60px 20px', textAlign: 'center' }}>
+      {/* 5. B2B VISION */}
+      <section style={{ backgroundColor: '#0B2545', color: 'white', padding: '80px 20px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <span style={{ border: '1px solid text-yellow-400', color: '#facc15', padding: '5px 10px', borderRadius: '20px', fontSize: '12px' }}>{t.b2b.badge}</span>
-          <h2 style={{ fontSize: '32px', marginTop: '20px' }}>{t.b2b.title}</h2>
-          <p style={{ color: '#8DA9C4', marginTop: '20px', lineHeight: '1.6' }}>{t.b2b.desc}</p>
+          <span style={{ border: '1px solid #facc15', color: '#facc15', padding: '6px 16px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>
+            ⏱️ HIVATALOS DISZTRÍBÚTORI JELÖLT
+          </span>
+          <h2 style={{ fontSize: '36px', marginTop: '25px', fontWeight: 'bold' }}>B2B Jövőkép: Úton a Hivatalos Disztribúció Felé</h2>
+          <p style={{ color: '#8DA9C4', marginTop: '20px', lineHeight: '1.6', fontSize: '17px', fontWeight: '300' }}>
+            Célunk, hogy a régió legelismertebb Magiline szervizpartnereként szintet lépjünk. Hivatalos, gyári márkaképviseletként és disztribútorként kívánjuk biztosítani a francia anyavállalat számára a legmagasabb szintű hazai értékesítést és támogatást.
+          </p>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" style={{ maxWidth: '600px', margin: '40px auto', backgroundColor: 'white', padding: '40px', borderRadius: '20px', border: '1px solid #8DA9C4' }}>
-        <h2 style={{ text: 'center' }}>{t.contact.title}</h2>
-        <p style={{ color: '#134074', fontSize: '14px' }}>{t.contact.subtitle}</p>
-        <div style={{ marginTop: '20px', fontSize: '14px', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '30px' }}>
-          <div>📞 <strong>Telefon:</strong> +36 30 123 4567</div>
-          <div>✉️ <strong>Email:</strong> info@vincemedence.hu</div>
-          <div>📍 <strong>Helyszín:</strong> Budapest & Országos lefedettség</div>
+      {/* 6. CONTACT FORM */}
+      <section id="contact" style={{ maxWidth: '650px', margin: '60px auto', backgroundColor: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid rgba(141,169,196,0.2)' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: 'bold', margin: '0 0 10px 0', textAllign: 'center' }}>Kapcsolatfelvétel Szervizhez</h2>
+        <p style={{ color: '#134074', fontSize: '15px', marginBottom: '30px' }}>Vegye fel velünk a kapcsolatot, legyen szó sürgős hibaelhárításról vagy szezonális munkákról.</p>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', fontSize: '16px', fontWeight: '600', color: '#0B2545', backgroundColor: '#EEF4F8', padding: '25px', borderRadius: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>📞 <span><strong>Telefon:</strong> <a href="tel:+36703721008" style={{ color: '#0B2545', textDecoration: 'none' }}>+36 70 372 1008</a></span></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>✉️ <span><strong>E-mail:</strong> <a href="mailto:kottagyula@gmail.com" style={{ color: '#0B2545', textDecoration: 'none' }}>kottagyula@gmail.com</a></span></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>📍 <span><strong>Lefedettség:</strong> Budapest & Országos szervizhálózat</span></div>
         </div>
       </section>
+
+      {/* 7. FOOTER */}
+      <footer style={{ backgroundColor: '#0B2545', color: 'rgba(255,255,255,0.5)', textAlign: 'center', padding: '30px 20px', fontSize: '13px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} Vince Medence. Minden jog fenntartva.</p>
+        <p style={{ margin: '5px 0 0 0', italic: 'true', color: 'rgba(255,255,255,0.3)' }}>Független szakértői és szerviz szolgáltatás Magiline típusú medencerendszerekhez.</p>
+      </footer>
 
     </div>
   );
